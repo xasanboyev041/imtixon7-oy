@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchUser } from "../store/userSlice";
 import { useParams } from "react-router-dom";
 import { Card, Spin } from "antd";
+import "../styles/UserDatailsPage.css";
 
 const UserDetailsPage = () => {
   const { id } = useParams();
@@ -15,28 +16,27 @@ const UserDetailsPage = () => {
 
   if (status === "loading") {
     return (
-      <div className="flex justify-center items-center h-screen">
+      <div className="userdetails-loading">
         <Spin tip="Loading..." />
       </div>
     );
   }
 
   return (
-    <div className="flex justify-center items-center h-screen bg-gray-100">
+    <div className="userdetails-container">
       {singleUser && (
         <Card
           title={`${singleUser.first_name} ${singleUser.last_name}`}
-          style={{ width: 300 }}
+          className="userdetails-card"
           cover={
             <img
               alt="avatar"
               src={singleUser.avatar}
-              className="w-full object-cover h-64"
+              className="userdetails-avatar"
             />
           }
-          className="shadow-lg"
         >
-          <p className="text-lg font-medium">Email: {singleUser.email}</p>
+          <p className="userdetails-email">Email: {singleUser.email}</p>
         </Card>
       )}
     </div>

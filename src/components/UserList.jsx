@@ -1,20 +1,21 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./UserList.css"
 
 const UserList = ({ users }) => {
   return (
-    <ul className="grid grid-cols-3 gap-4">
+    <ul className="user-list-container">
       {users.map((user) => (
-        <li key={user.id} className="border p-4">
+        <li key={user.id} className="user-card">
           <img
             src={user.avatar}
             alt={user.first_name}
-            className="rounded-full"
+            className="user-avatar"
           />
-          <h2 className="text-lg font-bold">
+          <h2 className="user-name">
             {user.first_name} {user.last_name}
           </h2>
-          <Link to={`/user/${user.id}`} className="text-blue-500">
+          <Link to={`/user/${user.id}`} className="user-link">
             Details
           </Link>
         </li>

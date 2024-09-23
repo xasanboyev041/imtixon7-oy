@@ -1,103 +1,52 @@
-.bg-gradient-to-r {
-  background-image: linear-gradient(to right, #9f7aea, #667eea, #3182ce);
+
+.navbar-container {
+  background-color: #1f2937; 
+  padding: 16px 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  font-family: "Arial", sans-serif;
 }
 
-.container {
-  max-width: 1280px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.shadow-lg {
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
-    0 4px 6px -2px rgba(0, 0, 0, 0.05);
-}
-
-.text-white {
-  color: white;
-}
-
-.text-2xl {
-  font-size: 1.5rem;
-}
-
-.font-bold {
-  font-weight: bold;
-}
-
-.flex {
-  display: flex;
-}
-
-.justify-between {
-  justify-content: space-between;
-}
-
-.items-center {
-  align-items: center;
-}
-
-.hidden {
-  display: none;
-}
-
-.md\\:flex {
-  @media (min-width: 768px) {
-    display: flex;
-  }
-}
-
-.space-x-6 {
-  > * + * {
-    margin-left: 1.5rem;
-  }
-}
-
-.p-4 {
-  padding: 1rem;
-}
-
-.md\\:hidden {
-  @media (min-width: 768px) {
-    display: none;
-  }
-}
-
-.text-2xl {
-  font-size: 1.5rem;
-}
-
-.bg-transparent {
-  background-color: transparent;
-}
-
-.shadow-lg {
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Custom Menu */
-.ant-menu-dark.ant-menu-horizontal {
+.navbar-menu {
+  max-width: 1200px;
+  margin: 0 auto;
   background: transparent;
+  display: flex;
+  justify-content: space-around;
   border-bottom: none;
 }
 
-.ant-menu-dark .ant-menu-item:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-}
-
-.ant-menu-item-selected {
-  background-color: rgba(255, 255, 255, 0.4) !important;
-  color: #fff !important;
+.ant-menu-item {
+  padding: 0 20px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: color 0.3s ease;
 }
 
 .ant-menu-item a {
-  color: white !important;
+  color: #d1d5db;
+  text-decoration: none;
 }
 
 .ant-menu-item:hover a {
-  color: #cbd5e0 !important;
+  color: #60a5fa; 
 }
 
 .ant-menu-item-selected a {
-  color: #e2e8f0 !important;
+  color: #3b82f6;
+  border-bottom: 2px solid #3b82f6; 
+}
+
+@media (max-width: 768px) {
+  .navbar-menu {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .ant-menu-item {
+    padding: 10px 0;
+  }
 }

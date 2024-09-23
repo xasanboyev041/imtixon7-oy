@@ -1,11 +1,12 @@
 import React from "react";
 import { Menu } from "antd";
 import { Link } from "react-router-dom";
+import "./Navbar.css"; 
 
 const Navbar = () => {
   return (
-    <header className="bg-gray-800 p-4">
-      <Menu theme="dark" mode="horizontal" className="container mx-auto">
+    <header className="navbar-container">
+      <Menu theme="dark" mode="horizontal" className="navbar-menu">
         <Menu.Item key="home">
           <Link to="/">Home</Link>
         </Menu.Item>

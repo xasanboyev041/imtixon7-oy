@@ -1,0 +1,37 @@
+
+.userdetails-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.userdetails-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f3f4f6;
+}
+
+.userdetails-card {
+  width: 300px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background-color: white;
+}
+
+.userdetails-avatar {
+  width: 100%;
+  object-fit: cover;
+  height: 250px;
+  border-radius: 8px 8px 0 0;
+}
+
+.userdetails-email {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  margin-top: 15px;
+}
